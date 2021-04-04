@@ -1,7 +1,11 @@
-import React from 'react';
+import React from "react";
 
-const Rank = () => (
-  <button className="btn btn-primary rank" name="rank">
+const Rank = ({ handleClick }) => (
+  <button
+    onClick={() => handleClick("rank")}
+    className="btn btn-primary rank"
+    name="rank"
+  >
     Rank
   </button>
 );

@@ -1,7 +1,11 @@
-import React from 'react';
+import React from "react";
 
-const Name = () => (
-  <button className="btn btn-primary name" name="name">
+const Name = ({ handleClick }) => (
+  <button
+    onClick={() => handleClick("name")}
+    className="btn btn-primary name"
+    name="name"
+  >
     Name
   </button>
 );

@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import usersJSON from '../data.json';
+import React, { Component } from "react";
 
 export default class Table extends Component {
   render() {
@@ -15,8 +14,8 @@ export default class Table extends Component {
             </tr>
           </thead>
           <tbody>
-            {usersJSON.map((user) => (
-              <tr>
+            {this.props.data.map((user, idx) => (
+              <tr key={idx}>
                 <td>{user.age}</td>
                 <td>{user.name}</td>
                 <td>{user.points}</td>

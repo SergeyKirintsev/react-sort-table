@@ -1,7 +1,11 @@
-import React from 'react';
+import React from "react";
 
-const Age = () => (
-  <button className="btn btn-primary age" name="age">
+const Age = ({ handleClick }) => (
+  <button
+    onClick={() => handleClick("age")}
+    className="btn btn-primary age"
+    name="age"
+  >
     Age
   </button>
 );
