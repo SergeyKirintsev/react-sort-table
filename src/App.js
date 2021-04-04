@@ -5,6 +5,7 @@ import Points from "./components/Points";
 import Rank from "./components/Rank";
 import Table from "./components/Table";
 import usersJSON from "./data.json";
+import SortButton from "./components/SortButton";
 
 export default class App extends Component {
   constructor(props) {
@@ -27,10 +28,26 @@ export default class App extends Component {
           <h1>Leaderboard</h1>
         </header>
         <div className="text-center buttons">
-          <Age handleClick={this.sortBtnHandle} />
-          <Name handleClick={this.sortBtnHandle} />
-          <Points handleClick={this.sortBtnHandle} />
-          <Rank handleClick={this.sortBtnHandle} />
+          <SortButton
+            handleClick={() => this.sortBtnHandle("age")}
+            title="Age"
+          />
+          <SortButton
+            handleClick={() => this.sortBtnHandle("name")}
+            title="Name"
+          />
+          <SortButton
+            handleClick={() => this.sortBtnHandle("points")}
+            title="Points"
+          />
+          <SortButton
+            handleClick={() => this.sortBtnHandle("rank")}
+            title="Rank"
+          />
+          {/*<Age handleClick={this.sortBtnHandle} />*/}
+          {/*<Name handleClick={this.sortBtnHandle} />*/}
+          {/*<Points handleClick={this.sortBtnHandle} />*/}
+          {/*<Rank handleClick={this.sortBtnHandle} />*/}
           <Table data={this.state.data} />
         </div>
       </div>
